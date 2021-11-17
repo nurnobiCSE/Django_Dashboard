@@ -119,7 +119,7 @@
         </ul>
       </div>
       <a href="{% url 'account:addsale' %}"><button class="btn btn-primary">New Sale</button></a>
-      <a href="#"><button class="btn btn-primary">Print</button></a>
+      <a href="#"><button class="btn btn-primary" onclick="exportData()">Download sales report</button></a>
       <br><br>
       <div class="row">
         <div class="col-md-12">
@@ -160,6 +160,7 @@
       </div>
     </main>
     <!-- Essential javascripts for application to work-->
+    <script type="text/javascript" src="{% static 'js/backend.js' %}"></script>
    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
     <script src="{% static 'js/popper.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
