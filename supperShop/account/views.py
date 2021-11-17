@@ -197,7 +197,7 @@ def addUser_set(request):
                 user = User.objects.create_user(username=username,password=password)
                 user.save()
                 messages.success(request,"new user registered!")
-                return redirect('account:login')
+                return redirect('account:addmy_user')
 
     return render(request, 'adduser.html')
 
