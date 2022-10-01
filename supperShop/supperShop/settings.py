@@ -16,7 +16,7 @@ SECRET_KEY = 'django-insecure-7l@m8xr2)$eg4spqk2m@9!6=0p4)(_@g$vtxuo7w=tu79-f+rk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['10.0.2.2', '127.0.0.1']
 
 
 # Application definition
@@ -31,6 +31,8 @@ INSTALLED_APPS = [
 
     #won app:
     'account',
+    'APIapp',
+    'rest_framework'
     #'crispy_forms',
 ]
 
@@ -135,5 +137,10 @@ MEDIA_ROOT = BASE_DIR / 'media_root'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES':('rest_framework.renderers.JSONRenderer',)
+}
 
 django_heroku.settings(locals())
+
+ 
